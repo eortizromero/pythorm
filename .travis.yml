@@ -1,11 +1,10 @@
 sudo: false
 language: python
 
-install:
-        - pip install pip
-matrix:
-        include:
-                - python: 2.7
+python:
+        - "2.7"
 
-cache:
-        - pip
+install:
+        - pip install -r requirements.txt
+
+script: trial pythorm
